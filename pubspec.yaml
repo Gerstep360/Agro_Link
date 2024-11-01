@@ -34,6 +34,9 @@ dependencies:
   flutter_animate: ^4.0.0 # Versión actual de flutter_animate
   intl: ^0.17.0
   flutter_staggered_animations: ^1.0.0
+  flutter_map: ^4.0.0
+  latlong2: ^0.8.1
+  geocoding: ^2.0.5  # Opcional, para obtener la dirección a partir de coordenadas
 
 
   # The following adds the Cupertino Icons font to your application.

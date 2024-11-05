@@ -22,8 +22,7 @@ Pasos de Configuración
    - Luego, regenera los archivos ejecutando:
 	```bash
        flutter create .
-
-   Esto reinstalará los archivos necesarios en "windows/" y configurará de nuevo los archivos de compilación.
+ Esto reinstalará los archivos necesarios en "windows/" y configurará de nuevo los archivos de compilación.
 
 3. Verificar que CMake esté instalado y en el PATH
 
@@ -31,7 +30,7 @@ Pasos de Configuración
 	```bash
        cmake --version
 
-   Si CMake no está instalado o en el PATH, Flutter no podrá compilar la aplicación para Windows.
+ Si CMake no está instalado o en el PATH, Flutter no podrá compilar la aplicación para Windows.
 
 4. Correr nuevamente el proyecto
 

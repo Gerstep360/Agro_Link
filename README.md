@@ -1,20 +1,42 @@
-<<<<<<< HEAD
-# agro_link
 
-A new Flutter project.
+Configuración del Proyecto Flutter para Windows
 
-## Getting Started
+Este proyecto requiere algunos pasos previos en la configuración de la plataforma Windows en Flutter. 
+Asegúrate de seguir las instrucciones a continuación antes de ejecutar el programa en un entorno Windows.
 
-This project is a starting point for a Flutter application.
+Pasos de Configuración
 
-A few resources to get you started if this is your first Flutter project:
+1. Habilitar la plataforma Windows en Flutter
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+   Asegúrate de que la plataforma Windows esté habilitada en Flutter. Para habilitarla, abre una terminal en el 
+   directorio raíz del proyecto y ejecuta:
+	```bash
+   flutter config --enable-windows-desktop
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
-# Agro_Link
->>>>>>> 94a097637d3ef57c54ca404384681ce20ddff820
+2. Recrear el Directorio de Compilación de Windows
+
+   Si observas algún error relacionado con archivos de compilación faltantes o corruptos, como "CMakeLists.txt" o la carpeta "runner",
+   sigue estos pasos:
+
+   - Primero, elimina la carpeta "windows" en el directorio raíz del proyecto.
+   - Luego, regenera los archivos ejecutando:
+	```bash
+       flutter create .
+
+   Esto reinstalará los archivos necesarios en "windows/" y configurará de nuevo los archivos de compilación.
+
+3. Verificar que CMake esté instalado y en el PATH
+
+   Asegúrate de que CMake esté instalado en tu sistema y accesible desde la terminal. Puedes verificar esto ejecutando:
+	```bash
+       cmake --version
+
+   Si CMake no está instalado o en el PATH, Flutter no podrá compilar la aplicación para Windows.
+
+4. Correr nuevamente el proyecto
+
+   Una vez que hayas seguido los pasos anteriores, intenta compilar el proyecto con:
+	```bash
+       flutter run -d windows
+
+Estos pasos deberían restaurar los archivos de configuración para Windows y resolver los errores de compilación.

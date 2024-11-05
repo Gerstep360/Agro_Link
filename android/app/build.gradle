@@ -1,0 +1,41 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.agro_link"
+    compileSdk = 34 // Cambia a la última versión que deseas soportar.
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    defaultConfig {
+        applicationId "com.example.agro_link" // Cambia este ID por el de tu aplicación
+        minSdkVersion flutter.minSdkVersion // Mínimo recomendado para asegurar compatibilidad con versiones antiguas
+        targetSdkVersion 33 // Última versión disponible, mantente actualizado con los nuevos lanzamientos
+        versionCode 1 // Número de versión para control de actualizaciones (incrementa con cada nueva versión)
+        versionName "1.0.0" // Nombre de la versión visible al usuario
+    }
+
+
+
+    buildTypes {
+        release {
+            // Configuración de firma para la versión de lanzamiento
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
